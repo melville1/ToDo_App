@@ -6,10 +6,20 @@
     <input type="submit" name="create" value="Create" />
 
 </form>
+<!-- lines 3- 8 is a form tag. line 3 deals with the "post" meaning what happens next and the action 
+    is where we, where the page will go next. say 
+    line 4 is just there because of some error although it is needed dont focus too much on that.
+    line 5 belongs to the key value that was created in views. 
+    line 6 is a button.
 
+-->
 
 <ul>
    {% for task in task_list %}
         <li><a href="{% url 'task_detail' task.id %}">   {{ task.description }} </a></li>
         {% endfor %}
 </ul>
+<!-- lines 11-15 are iterating through the table named task, 
+task.description prints out the specific coloumn/attributeli-->
+<!-- line 19 href makes each row a link "task_detail" this is where the page where the data
+is sent and task.id is dealing with that paritcular id-->
